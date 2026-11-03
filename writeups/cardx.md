@@ -19,3 +19,51 @@ A "sure" identification requires a **margin over the next *different* card**, no
 - Test set frozen and hash-locked; predictions written **before** scoring
 
 The W1–W9 research programme attacked the system's own weaknesses: 885 same-art reprint twins (4.5% of the catalog) that break naive margin tests, stamped variants missing from the catalog, finish recognition from flat photos (a flash/no-flash pair is the designed lever), and small vision-language models measured and **rejected** — they scored 0–2 of 24 and abstained 0 times in 120 tries. That record is why the "not sure" answer matters in this system.
+
+## Code samples
+
+The samples below were written for this page to show how the ideas work. They are simplified, renamed, and use made-up data — they are not the production code, and anything operational (keys, endpoints, catalog data, store details) is left out by design.
+
+**The "sure" rule** — a match counts only if it beats the best *different* card by a margin:
+
+```python
+def decide(candidates, margin=0.06):
+    # candidates: [(card_id, score), ...] sorted best-first, scores in [0, 1]
+    if not candidates:
+        return ("not_sure", None)
+    best_id, best = candidates[0]
+    rival = next((s for cid, s in candidates[1:] if cid != best_id), 0.0)
+    if best - rival >= margin:
+        return ("sure", best_id)
+    return ("not_sure", None)   # a person looks at this one
+```
+
+**How many clean "sure" answers prove the error rate?** — the Wilson bound the project uses to set its own bar:
+
+```python
+import math
+
+def wilson_upper(errors, n, z=1.96):
+    if n == 0:
+        return 1.0
+    p = errors / n
+    denom = 1 + z**2 / n
+    centre = p + z**2 / (2 * n)
+    spread = z * math.sqrt(p * (1 - p) / n + z**2 / (4 * n**2))
+    return (centre + spread) / denom
+
+# 0 errors: n=294 -> upper bound ~1.3% | n=381 -> ~1.0% | n=765 -> ~0.5%
+```
+
+**A batch manifest fragment** — what one split photo produces, so every later step can be checked against it:
+
+```json
+{
+  "batch": "EXAMPLE-0001",
+  "photo": "grid_a.jpg",
+  "slots": [
+    {"slot": 1, "front": "img_001_f.jpg", "back": "img_001_b.jpg",
+     "orientation": "ocr-vote", "detector": "found"}
+  ]
+}
+```
