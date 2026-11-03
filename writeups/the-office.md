@@ -1,6 +1,6 @@
-# The Office — a multi-agent workspace with evaluator separation
+# The Office: a multi-agent workspace with evaluator separation
 
-A persistent workplace where several AI agents hold roles, do work, and review each other — with one blocking design rule: **no agent grades its own work.** Evaluator role separation is enforced structurally, not by convention.
+A persistent workplace where several AI agents hold roles, do work, and review each other, with one blocking design rule: **no agent grades its own work.** Evaluator role separation is enforced structurally, not by convention.
 
 **How the rule was earned**
 - Two independent adversarial reviews (an outside auditor's 14 findings; a second reviewer's 19 attacks / 14 gaps) were run against the design; 47 of 48 findings were accepted and implemented.
@@ -9,4 +9,4 @@ A persistent workplace where several AI agents hold roles, do work, and review e
 
 The system is private; this write-up is its public record.
 
-**Jordan's role:** owner and acceptance authority — he set the role-separation rule and dispositioned the review findings. Implementation was directed across the agents who also work in it.
+**Jordan's role:** owner and acceptance authority, he set the role-separation rule and dispositioned the review findings. Implementation was directed across the agents who also work in it.
