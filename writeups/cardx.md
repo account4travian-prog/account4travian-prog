@@ -15,7 +15,7 @@ A five-part ecosystem that takes trading cards from grid photos to verified eBay
 A "sure" identification requires a **margin over the next *different* card**, not a high raw score — and "sure" is never treated as a calibrated probability.
 
 - Measured: **0 wrong "sure" answers across 294 card fronts**
-- The statistical bar, set properly: a Wilson 95% bound under 1% wrong needs **≈381 clean sures** (≈765 for 0.5%)
+- The goal the project verifies itself against: enough clean sures that a Wilson 95% bound puts the error rate under 1% — that takes **≈381 clean sures** (≈765 for 0.5%)
 - Test set frozen and hash-locked; predictions written **before** scoring
 
 The W1–W9 research programme attacked the system's own weaknesses: 885 same-art reprint twins (4.5% of the catalog) that break naive margin tests, stamped variants missing from the catalog, finish recognition from flat photos (a flash/no-flash pair is the designed lever), and small vision-language models measured and **rejected** — they scored 0–2 of 24 and abstained 0 times in 120 tries. That record is why the "not sure" answer matters in this system.
