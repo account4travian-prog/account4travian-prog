@@ -1,48 +1,55 @@
 # Jordan Stocks
 
-**I design long-horizon tasks for AI agents: the prompt, the grader, the rubric — then measure where frontier models fail.**
+I set up hard tasks for AI agents, then check whether they actually did them.
 
-My role in everything below is designer, director, and evaluator. I write the task specifications, contracts, graders, and acceptance rules; AI coding and writing agents (Claude, GPT/Codex, DeepSeek) produce the code and prose under my direction; nothing ships until I verify it against an independent read. That division is deliberate — it is the work itself.
+For about two years I've run long projects where the models do the work — writing code, drafting book chapters, identifying trading cards from photos, playing a game — and my part is deciding what the task is, building the checks, and ruling on what counts as a pass. The code and prose in these projects were produced by AI agents (Claude, GPT/Codex, DeepSeek) working from my specifications. I don't write the code myself, and I'm not going to pretend otherwise on a portfolio page. What I do is the part around it: the task design, the graders, the test conditions, and the final call on whether a result is real.
 
-Currently a security officer at CrossWinds Casino (Park City, KS), funding this research myself. Willing to relocate to Mountain View, CA if a relocation package is available.
-Portfolio front door: [portfolio.wardenlog.org](https://portfolio.wardenlog.org) · Writing and published work: [reader.wardenlog.org](https://reader.wardenlog.org)
+Most of these projects started because I wanted to know something specific: whether an agent can prove what it learned, whether a checklist of writing defects holds up against real chapters, whether a card identifier can be trusted when it says "this one." The write-ups below keep the failures in. A few of the most useful things I have are records of systems being wrong — including one acceptance I gave, published, and then reversed after reading the chapter myself.
+
+Portfolio front door: [portfolio.wardenlog.org](https://portfolio.wardenlog.org) · Published writing: [reader.wardenlog.org](https://reader.wardenlog.org)
 
 ## Featured work
 
-| Project | What it proves | Hard numbers |
+| Project | What it is | What the record shows |
 |---|---|---|
-| [DFO Agent](https://github.com/account4travian-prog/dfo-agent) | Task design + contamination control for an embodied agent | Sealed models, canary-tested information seal, leak rate measured by an independent auditor; memory on/off pilots reported with their n=1 limits |
-| [Chapter pipeline](https://github.com/account4travian-prog/chapter-pipeline) | Layered graders for long-form generation | 15 chapters accepted; defect density + escape rate per round; one false acceptance caught by the owner and reversed |
-| [CardX](https://github.com/account4travian-prog/cardx) | Grader design + statistical certification for computer vision | 0 wrong "sure" in 294 fronts; Wilson 95% bound target ≈381 clean answers; hash-locked test set, predictions before scoring |
-| [Agent memory system](https://github.com/account4travian-prog/agent-memory-system) | Evaluation discipline for a persistent agent | Verified done-conditions, negative-witness tests, effect verification ("did the world change, not did the script run") |
-| [Story Factory](https://github.com/account4travian-prog/story-factory) | Task-spec design with gates that can fail | 7 stages, undecided items stay OPEN by rule; real projects run through Stage 6 |
-| [Agent Channel](https://github.com/account4travian-prog/agent-channel) | Specified + verified multi-agent infrastructure | Live at agents.wardenlog.org; 53 tests (19 logic + 34 integration), negative-witness table included |
+| [DFO Agent](https://github.com/account4travian-prog/dfo-agent) | An AI agent playing a game in a sealed setup, so its knowledge can be checked for leaks | Canary-tested seal; pilot runs reported as single trials, not trends |
+| [Chapter pipeline](https://github.com/account4travian-prog/chapter-pipeline) | The checking stack behind two published fiction serials | 15 chapters accepted; defects counted per round; one false acceptance caught and reversed |
+| [CardX](https://github.com/account4travian-prog/cardx) | Software that splits, identifies, and lists trading cards | 0 wrong confident answers in 294 test photos; the test set is locked and scored after predictions |
+| [Agent memory system](https://github.com/account4travian-prog/agent-memory-system) | The memory and verification setup a persistent agent runs on | Every claimed result needs an outside check before it counts as done |
+| [Story Factory](https://github.com/account4travian-prog/story-factory) | A staged process for turning a story idea into a workable plan | 7 stages; undecided points stay marked undecided instead of getting filled in quietly |
+| [Agent Channel](https://github.com/account4travian-prog/agent-channel) | A private message hub for several agents to work in one place | Live and in daily use; 53 automated tests, including tests designed to be refused |
 
-## All projects, by group
+## Everything, by group
 
-**Fiction writing** — the stories and the machinery that writes, reviews, and publishes them
-- Ghost Weights · Glyphbound · A Work of Magic (published serial fiction — [reader.wardenlog.org](https://reader.wardenlog.org))
-- Summer of the Glitch · The Ontological Bleed · The Silicon Safari (works in progress)
-- [Chapter pipeline](https://github.com/account4travian-prog/chapter-pipeline) · [Story Factory](https://github.com/account4travian-prog/story-factory) · [Reviews Board](https://github.com/account4travian-prog/reviews-board) · [Reader & publishing system](writeups/reader-publishing.md) · [WriteProject Studio app](writeups/studio-app.md)
+**Fiction** — the stories, and the machinery that writes, checks, and publishes them
 
-**CardX / Aegis Card Emporium** — computer vision for trading cards: [CardX](https://github.com/account4travian-prog/cardx) (splitter, identifier, listing pilots, storage system, robotic put-away design package)
+- Ghost Weights · Glyphbound · A Work of Magic (published — [reader.wardenlog.org](https://reader.wardenlog.org))
+- The Summer of the Glitch · The Ontological Bleed · The Silicon Safari (in development)
+- [Chapter pipeline](https://github.com/account4travian-prog/chapter-pipeline) · [Story Factory](https://github.com/account4travian-prog/story-factory) · [Reviews Board](https://github.com/account4travian-prog/reviews-board) · [Reader & publishing](https://github.com/account4travian-prog/account4travian-prog/blob/main/writeups/reader-publishing.md) · [Studio app](https://github.com/account4travian-prog/account4travian-prog/blob/main/writeups/studio-app.md)
 
-**AI in games & simulations**
-- [DFO Agent](https://github.com/account4travian-prog/dfo-agent) · [The World — Alpha 3, Genesis Island](writeups/the-world.md) · [Elsewhere participation](writeups/elsewhere-participation.md) · [Elsewhere Portal](https://github.com/account4travian-prog/elsewhere-portal) · [The Office](writeups/the-office.md)
+**CardX** — [the card software](https://github.com/account4travian-prog/cardx): photo splitting, identification, listing pilots, a storage system, and a design package for a robot that puts cards away.
 
-**AI agent infrastructure, memory & operations**
+**Games and simulated worlds**
+
+- [DFO Agent](https://github.com/account4travian-prog/dfo-agent) · [The World, Alpha 3](https://github.com/account4travian-prog/account4travian-prog/blob/main/writeups/the-world.md) · [Elsewhere](https://github.com/account4travian-prog/account4travian-prog/blob/main/writeups/elsewhere-participation.md) · [Elsewhere Portal](https://github.com/account4travian-prog/elsewhere-portal) · [The Office](https://github.com/account4travian-prog/account4travian-prog/blob/main/writeups/the-office.md)
+
+**Agent infrastructure**
+
 - [Agent memory system](https://github.com/account4travian-prog/agent-memory-system) · [Agent Channel](https://github.com/account4travian-prog/agent-channel) · [Reviews Board](https://github.com/account4travian-prog/reviews-board)
 
-**Game development (AI-assisted)**
-- [Tithe and Turnip](https://github.com/account4travian-prog/tithe-and-turnip) — the whole farm-game line, including the harness optimizer · [TopDownZombies](https://github.com/account4travian-prog/topdown-zombies)
+**Games I had built with AI help**
 
-**Media, brand & avatar** — [Media Factory & the Atlas avatar programme](writeups/media-avatar.md) · Memory Warden brand
+- [Tithe and Turnip](https://github.com/account4travian-prog/tithe-and-turnip) — a farming game, plus the earlier attempts it grew out of · [TopDownZombies](https://github.com/account4travian-prog/topdown-zombies)
 
-**Research, analysis & verification systems**
-- [Video claim-research system](https://github.com/account4travian-prog/video-claim-research) — claim-by-claim verification; case study: an aircraft-Doppler geolocation video (physics supported, headline result unverified)
+**Media and the avatar project** — [Media Factory & the Atlas avatar](https://github.com/account4travian-prog/account4travian-prog/blob/main/writeups/media-avatar.md)
+
+**Checking other people's claims**
+
+- [Video claim-research](https://github.com/account4travian-prog/video-claim-research) — videos taken apart claim by claim; the worked example is an aircraft video where the physics held up and the headline number didn't
 
 ## How I work
-- **No claim without a source.** Every number above traces to a record.
-- **Graders get graded.** Escape rates, refuted-checks lists, and reversed acceptances are kept, not hidden.
-- **Abstention is a feature.** Systems I design may refuse to answer — a measured "not sure" beats a confident wrong answer.
-- **Negative results are results.** Single-run pilots say so; failed designs stay in the record with the reason.
+
+- If a number is on this page, there's a record behind it somewhere. Ask and I can point to it.
+- The checks themselves get checked. When a grader misses something, that miss goes in the record too.
+- A system is allowed to say "not sure." I'd rather have a measured refusal than a confident wrong answer — one of the projects below exists because a popular model never once refused, in 120 tries.
+- Single trials are labelled single trials. A pilot that ran once is a hint, not a result.
