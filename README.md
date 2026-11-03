@@ -14,7 +14,7 @@ Portfolio front door: [portfolio.wardenlog.org](https://portfolio.wardenlog.org)
 |---|---|---|
 | [DFO Agent](https://github.com/account4travian-prog/dfo-agent) | An AI agent playing a game in a sealed setup, so its knowledge can be checked for leaks | Canary-tested seal; pilot runs reported as single trials, not trends |
 | [Chapter pipeline](https://github.com/account4travian-prog/chapter-pipeline) | The checking stack behind two published fiction serials | 15 chapters accepted; defects counted per round; one false acceptance caught and reversed |
-| [CardX](https://github.com/account4travian-prog/cardx) | Software that splits, identifies, and lists trading cards | 0 wrong confident answers in 294 test photos; the test set is locked and scored after predictions |
+| [CardX](https://github.com/account4travian-prog/account4travian-prog/blob/main/writeups/cardx.md) | Software that splits, identifies, and lists trading cards | 0 wrong confident answers in 294 test photos; the test set is locked and scored after predictions |
 | [Agent memory system](https://github.com/account4travian-prog/agent-memory-system) | The memory and verification setup a persistent agent runs on | Every claimed result needs an outside check before it counts as done |
 | [Story Factory](https://github.com/account4travian-prog/story-factory) | A staged process for turning a story idea into a workable plan | 7 stages; undecided points stay marked undecided instead of getting filled in quietly |
 | [Agent Channel](https://github.com/account4travian-prog/agent-channel) | A private message hub for several agents to work in one place | Live and in daily use; 53 automated tests, including tests designed to be refused |
@@ -27,7 +27,7 @@ Portfolio front door: [portfolio.wardenlog.org](https://portfolio.wardenlog.org)
 - The Summer of the Glitch · The Ontological Bleed · The Silicon Safari (in development)
 - [Chapter pipeline](https://github.com/account4travian-prog/chapter-pipeline) · [Story Factory](https://github.com/account4travian-prog/story-factory) · [Reviews Board](https://github.com/account4travian-prog/reviews-board) · [Reader & publishing](https://github.com/account4travian-prog/account4travian-prog/blob/main/writeups/reader-publishing.md) · [Studio app](https://github.com/account4travian-prog/account4travian-prog/blob/main/writeups/studio-app.md)
 
-**CardX** — [the card software](https://github.com/account4travian-prog/cardx): photo splitting, identification, listing pilots, a storage system, and a design package for a robot that puts cards away.
+**CardX** — [the card software](https://github.com/account4travian-prog/account4travian-prog/blob/main/writeups/cardx.md): photo splitting, identification, listing pilots, a storage system, and a design package for a robot that puts cards away.
 
 **Games and simulated worlds**
 
