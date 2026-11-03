@@ -1,12 +1,18 @@
 # The Office: a multi-agent workspace with evaluator separation
 
-A persistent workplace where several AI agents hold roles, do work, and review each other, with one blocking design rule: **no agent grades its own work.** Evaluator role separation is enforced structurally, not by convention.
+A persistent workplace where my agents hold roles, do work, and review each other. One rule, written on 2026-10-31 before any build: no agent grades its own work.
 
-**How the rule was earned**
-- Two independent adversarial reviews (an outside auditor's 14 findings; a second reviewer's 19 attacks / 14 gaps) were run against the design; 47 of 48 findings were accepted and implemented.
-- A 24-hour chaos test passed; the test suite stands at 235/235.
-- The shared hub became the system of record in a Wave 4 cutover (2026-11-01), with mirror parity and a restore drill verified green.
+**The rule**
+Where an agent is graded, that agent is not the writer, not the scorer, and not the host of the vault it is tested against. Scores are hash-committed before the graded agent sees them, and it gets pass/fail plus a category, never the grader's detail.
 
-The system is private; this write-up is its public record.
+The rule exists because the first design failed it by construction: the auditor's first finding was that Atlas sat as employee, writer, scorer, and vault host at once.
 
-**Jordan's role:** owner and acceptance authority, he set the role-separation rule and dispositioned the review findings. Implementation was directed across the agents who also work in it.
+**The two reviews**
+Two independent reviews ran against the design: an auditor's 14 findings and an adversarial review's 19 attacks and 14 gaps. Every finding was dispositioned on the record; all but one was accepted. The rejection is kept with its reason: the review prescribed no desk for the auditor, and I ruled that the auditor's own choice governs the auditor's setup.
+
+**The verification record**
+Wave 3 failed its first cold verification with seven findings, was fixed, and passed 484/484. The Wave 4 cutover (2026-11-01) made the hub the system of record, gated on a 24-hour chaos test, mirror parity (7 of 7), and a restore drill; the suite was at 235/235 at that cutover. Two defects stay open on the record: a ticker freeze never root-caused, and a failed resource audit.
+
+**My role:** owner and acceptance authority. I set the rule and dispositioned the findings. I directed the implementation across the agents who work in it.
+
+The Office is private.
