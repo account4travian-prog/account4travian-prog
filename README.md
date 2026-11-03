@@ -27,7 +27,7 @@ The code and prose come from AI agents (Claude, GPT/Codex, DeepSeek) working fro
 
 **Media.** [Media Factory and the Atlas avatar](https://github.com/account4travian-prog/account4travian-prog/blob/main/writeups/media-avatar.md)
 
-**Research.** Video claim-research: videos taken apart claim by claim. The worked example is an aircraft video where the physics held up and the headline number could not be verified.
+**Research.** [Video claim-research](https://github.com/account4travian-prog/video-claim-research): videos taken apart claim by claim. The worked example is an aircraft video where the physics held up and the headline number could not be verified.
 
 ## How I work
 
