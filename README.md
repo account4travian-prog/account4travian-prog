@@ -31,7 +31,7 @@ The code and prose come from AI agents (Claude, GPT/Codex, DeepSeek) working fro
 
 ## How I work
 
-- I use and test experimental and newly released models through OpenCode. In September 2026 I commissioned timing runs across every free OpenCode model and staffed outside reader roles from that pool. In October 2026 I directed the reviewer roles to OpenCode models on my PC. I have published no benchmarks from those comparisons.
+- I use and test experimental and newly released models through OpenCode. In September 2026 I commissioned timing runs across the free OpenCode models and staffed outside reader roles from that pool. In October 2026 I directed the reviewer roles to OpenCode models on my PC. I have published no benchmarks from those comparisons.
 - Every number on this page comes from a project record.
 - When a grader misses a defect that a later round catches, the miss goes in the record too.
 - A system can say "not sure" instead of guessing. The small vision-language models CardX measured never abstained in 120 tries, and were rejected.
